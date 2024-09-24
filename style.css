@@ -1,0 +1,111 @@
+/* Body Styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0; /* Light gray background */
+  font-family: "Arial", sans-serif;
+  flex-direction: column; /* Ensure the header is above the container */
+}
+
+/* Header Styling */
+.header {
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  color: #333;
+  text-align: center;
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Container Styling */
+.container {
+  background-color: #444; /* Dark gray background */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+  width: 300px; /* Width of the calculator */
+}
+
+/* Display Styling */
+.display {
+  background-color: #222; /* Very dark gray */
+  color: white;
+  font-size: 32px;
+  text-align: right;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px; /* Space between display and buttons */
+  height: 50px; /* Fixed height for the display */
+  overflow: hidden; /* Ensure long text doesn't overflow */
+}
+
+/* Button Styling */
+button {
+  background-color: #666; /* Medium gray for the buttons */
+  border: none;
+  color: white;
+  padding: 15px;
+  margin: 5px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #555; /* Slightly darker on hover */
+}
+
+button:active {
+  background-color: #777; /* Even darker when clicked */
+}
+
+/* Layout for Buttons */
+.numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns for numbers */
+  gap: 10px;
+  margin-bottom: 10px; /* Space between numbers and operations */
+}
+
+button.zero {
+  grid-column: span 2; /* Make zero button span two columns */
+}
+
+/* Specific Button Styling */
+button.multiply,
+button.add,
+button.subtract,
+button.divide {
+  background-color: #ff9500; /* Orange color for operations */
+}
+
+button.clear {
+  background-color: #d32f2f; /* Red color for clear button */
+  width: 100%; /* Make the clear button span across the container */
+  margin-top: 10px; /* Space above the clear button */
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  .container {
+    width: 90%;
+  }
+
+  button {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .display {
+    font-size: 24px;
+  }
+}
